@@ -35,7 +35,7 @@ router.get("/",verify, async (req, res) => {
   const typeQuery = req.query.type;
   const genreQuerry = req.query.genre;
   let list = [];
-  if (req.user.isAdmin) {
+ // if (req.user.isAdmin) {
     try {
       if (typeQuery) {
           if (genreQuerry) {
@@ -61,9 +61,9 @@ router.get("/",verify, async (req, res) => {
     } catch (err) {
       return res.status(500).json(err); 
     }
-  } else {
-    return res.status(403).json("Yuo can't see List");
-  }
+  // } else {
+  //   return res.status(403).json("Yuo can't see List");
+  // }
 }); 
 // router.get("/", verify, async (req, res) => {
 //   const typeQuery = req.query.type;
