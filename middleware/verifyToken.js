@@ -13,7 +13,8 @@ const verify = (req,res,next) => {
             req.user = user;         
             next();
         })
-    } else {
+    }
+    else {
         return res.status(401).json('your are not authorized')
     }
 }
