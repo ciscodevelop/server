@@ -8,7 +8,7 @@ const moviesRouter = require('./routes/movies');
 const listsRouter = require('./routes/lists');
 
 const app = express();
-const port = 8800;
+const port = process.env.PORT || 8800;
 
 dotenv.config();
 
